@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제</title>
+    <style>
+        .area {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+
+    <!--05. 연습문제-->
+
+    <h3>* 실습문제</h3>
+    <p>
+        사용자로부터 prompt로 입력받은 문자열 중 알파벳(소문자만)의 갯수 세기
+    </p>
+
+    <button onclick="example();">실습문제</button>
+    <div id="ex"></div>
+
+    <script>
+        '입력한 문자열에서 소문자 알파벳은 ??개 입니다'
+        function example() {
+            let prompt1 = prompt("문자열을 입력하세요");
+            let lowerApb = "";
+            for(let i=0; i<prompt1.length; i++) {
+                if(prompt1[i]>='a' && prompt1[i]<='z') {
+                    lowerApb += prompt1[i];
+                }
+            }
+            document.getElementById('ex').innerHTML = 
+            `입력한 문자열에서 소문자 알파벳은 ${lowerApb.length}개 입니다`;
+        }
+    </Script>
+
+    <h2>객체 연습문제</h2>
+    <h3>1. 다음의 표를 객체로 만들어라</h3>
+    <a href="https://miyakita.tistory.com/87">연습문제 링크</a><br><br>
+    
+    <button onclick="test1();">1.결과출력</button>
+    <div class="area" id="area1"></div>
+    
+    <script>
+        // 객체 생성자
+        function Book(name, price, athor, isbm, page) {
+            this.name = name;
+            this.price = price;
+            this.athor = athor;
+            this.isbm = isbm;
+            this.page = page;
+        }
+        function test1() {
+            const book = new Book('Nature of code', '30000원', 'Deniel Shifman', 9788968481901, 620);
+        
+            const area1 = document.getElementById('area1');
+            area1.innerHTML += `name : ${book.name}<br>
+                                price : ${book.price}<br>
+                                athor : ${book.athor}<br>
+                                ISBM : ${book.isbm}<br>
+                                page : ${book.page}<br>`;
+        }
+    </script>
+
+    <h3>2. 다음의 데이터를 객체 배열로 만들어라</h3>
+
+    <button onclick="test2();">2.결과출력</button>
+    <div class="area" id="area2"></div>
+    
+    <script>
+        // 객체 생성자
+        function Unit(이름, 미네랄, 가스, 보급품) {
+            this.이름 = 이름;
+            this.미네랄 = 미네랄;
+            this.가스 = 가스;
+            this.보급품 = 보급품;
+        }
+        function test2() {
+            const area2 = document.getElementById('area2'); // 버튼 값 샤랄라☆        
+            
+            const 일벌레 = new Unit('일벌레',50,0,1);
+            const 여왕 = new Unit('여왕',150,0,2);
+            const 바퀴 = new Unit('바퀴',75,25,2);
+            const 히드라리스크 = new Unit('히드라리스크',100,50,2);
+            const 타락귀 = new Unit('타락귀',150,100,2);
+
+            const zurg = [];
+            zurg.push(일벌레);
+            zurg.push(여왕);
+            zurg.push(바퀴);
+            zurg.push(히드라리스크);
+            zurg.push(타락귀);
+            
+            for(i in zurg) {
+                console.log(zurg[i]);
+            };
+            
+        }
+    </script>
+    <br><br><br>
+    <style>
+        #exam1 {
+            border: 1px solid;
+            width: 500px;
+            height: auto;
+            border-bottom: 1px solid;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            line-height: 40px;
+
+        }
+        #lastLine {
+            border-bottom: 1px solid gray;
+        }
+        th {
+            width: 500px;
+            font-size: 36px;
+            line-height: 2;
+        }
+        input {
+            display: inline;            
+        }
+        #submit {
+            text-align: center;
+        }
+        #submit input {
+            width: 70px;
+        }
+    </style>
+    <table>
+        <tr>
+            <th>회원가입</th>
+        </tr>
+    </table>
+    <table class="exam" id="exam1">
+
+    <tr><td>* 아이디 : <input type="text" name="userId" id="userId"></td></tr>
+    <tr><td> 첫글자는 반드시 영문자하고 영문자, 숫자 포함 총 4~12자로 입력하시오.</td></tr>
+
+    <tr><td>* 비밀번호 : <input type="password" name="userPw" id="userPw"></td></tr>
+    <tr><td>영문자, 숫자, 특수문자로 총 8~15자로 입력하시오.</td></tr>
+
+    <tr><td>* 비밀번호 확인 : <input type="password" name="userPwC" id="userPwc"></td></tr>
+    <tr><td>위의 비밀번호와 일치하게 입력하시오</td></tr>
+
+    <tr><td>* 이름 : <input type="text" name="userName" id="userName"></td></tr>
+    <tr><td>한글로만 이루어져 있어야 되며 2글자 이상으로 입력하시오.</td></tr>
+
+    <tr><td>* 이메일 : <input type="email" name="email" id="email"></td></tr>
+    <tr><td>이메일 형식에 맞춰 입력하시오.</td></tr>
+
+    <tr><td>* 취미 : <input type="text" name="hobby" id="hobby"></td></tr>
+
+    <tr><td id="lastLine">* 거주지 : 
+        <select name="home" id="home">
+        <option value="seoul">서울</option>
+        <option value="gNor">경기북부</option>
+        <option value="gSou">경기남부</option>
+        </select>
+    </td></tr>
+
+    <tr><td id="submit"><input type="submit" value="회원가입" class="btn" onclick="return validate();">
+                        &emsp;&emsp;&emsp;
+                        <input type="reset" value="취소" id="submit1"></td></tr>
+
+    </table>
+    <script>
+        const idExp = /^[a-zA-z][a-a-zA-Z0-9]{3,11}/;
+        const pwExp = //;
+
+        function validate() {
+            if(userPw != userPwc) {
+                return false;
+            }
+            
+        }
+    </script>    
+</body>
+</html>

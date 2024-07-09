@@ -1,0 +1,83 @@
+/* 전체 */
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* header */
+header { height: 350px; }
+#logo {
+    float: left;
+    height: 40px;
+    margin: 5px;
+}
+header > form {
+    float: right;
+    margin-top: 11px;
+}    
+#titleImg {
+    clear: both;
+    height: 300px;
+    width: 100%;  
+}
+.navi {
+    background-color: gray;
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+.navi a {
+    display: 1;
+    justify-content: space-around;
+    height: 60px;
+    width: 24%;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+}
+.navi a:link, .navi a:visited {color: white;}
+.navi a:hover { color: yellow; text-shadow: 2px 2px 2px black;}
+.navi a:active { color: rgb(104, 104, 104);}
+
+/* 본문 */
+section {
+    float: left;
+    width: 100%;
+    padding-left: 5px;
+}
+section h4 {
+    text-align: left;
+    line-height: 8px;
+}
+section p {
+    line-height: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#fakeimage {
+    display: none;
+    width: 100%;
+    height: 350px;
+}
+aside
+aside {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+aside img {
+    display: inline-block;
+    width: 32%;
+    margin-top: 4px;
+    margin-left: 5px;
+    height: 240px;
+}
+
+/* footer */
+footer {
+    clear: both;
+    font-size: small;
+    border-top: 1px solid;
+    line-height: 5px;
+}

@@ -1,0 +1,88 @@
+/* 전체 */
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* header */
+header { height: auto; }
+#logo {
+    display: block;
+    margin-left: 33%;
+    margin-right: auto;
+    padding-top: 5px;
+    height: 40px;
+} /*로고*/
+header > form {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+} /*로그인창*/
+#titleImg {
+    display: none; 
+} /*타이틀 이미지*/
+.navi {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+} /*네비 설정값*/
+.navi a {
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    color: white;
+    background-color: gray;
+    border-bottom: 1px solid white;
+} /*네비 창 4개*/
+.navi a:link, .navi a:visited {color: white;}
+.navi a:hover { color: yellow; text-shadow: 2px 2px 2px black;}
+.navi a:active { color: rgb(104, 104, 104);}
+
+/* 본문 */
+section {
+    float: left;
+    width: 100%;
+    padding-left: 5px;
+}
+section h4 {
+    text-align: left;
+    /* line-height: 8px; */
+}
+section p {
+    /* line-height: 15px; */
+    display: flex;
+    flex-wrap: wrap;
+}
+#second {
+    margin-top: 40px;
+}
+#fakeimage {
+    display: none;
+    width: 100%;
+    height: 350px;
+}
+aside
+aside {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+aside img {
+    width: 31%;
+    margin-top: 4px;
+    margin-left: 5px;
+    height: 80px;
+}
+
+/* footer */
+footer {
+    clear: both;
+    display: inline-block;
+    flex-wrap: wrap;
+    font-size: small;
+    border-top: 1px solid;
+    line-height: 10px;
+}

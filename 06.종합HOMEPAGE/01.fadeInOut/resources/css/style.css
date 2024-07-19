@@ -1,0 +1,40 @@
+
+/* 전체 */
+* {margin: 0 auto; padding: 0; list-style: none; text-decoration: none; color: black;}
+a {color: inherit;}
+a:hover {color: inherit;}
+body {width:1000px; margin: 0 auto; font-family: Arial, sans-serif;}/*margin ~ end*/
+
+/* 헤더부분 */
+header {height: 100px;}
+header>div {float: left;}
+header>div>img {width: 150px; margin-top: 25px; height: 100px;}
+
+header>nav{float: right; margin-top: 25px; padding: 10px;}
+.nav>li {float: left; width: 200px; text-align: center; position: relative; padding: 5px 0;}
+.nav>li:hover {background-color: rgb(4, 4, 81); color:white;}
+.nav > li:hover .submenu {display: block;}
+.submenu {display: none; position: absolute; width: 100%; margin-top: 5px; z-index: 3;}
+.submenu>li {padding: 5px 0; background-color: rgba(255,255,255,0.7);}
+.submenu>li:hover {background-color: rgba(4, 4, 81, 0.3); color: white;}
+
+/* 본문 이미지 */
+
+#imgslide {clear: both; width:1000px; height: 362px; position: relative; margin: 10px 0; overflow: hidden;}
+#imgslide>img {position: absolute;}
+
+/* 공지사항, 정보나눔 */
+.notice {float: left; width: 49%; height: 250px;}
+.notice>.table {float: left; line-height: 30px;}
+.partner {float: right; width: 49%; height: 250px;}
+#info-img {width: 500px; height: 200px;}
+
+/* 이미지 버튼 */
+.icon {
+    display: flex;
+    justify-content: space-around; /* or space-between, space-evenly, etc. */
+    padding: 20px;
+}
+
+/* 푸터 */
+footer {background-color: gainsboro;}

@@ -1,0 +1,57 @@
+/* 전체 */
+body {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* header */
+header { height: 350px; }
+#logo {
+    float: left;
+    height: 40px;
+    margin: 5px;
+}
+header > form {
+    float: right;
+    margin-top: 11px;
+}    
+#titleImg {
+    clear: both;
+    height: 300px;
+    width: 100%;  
+}
+.navi {
+    background-color: gray;
+    width: 1000px;
+    height: 60px;
+}
+.navi a {
+    display: inline-block;
+    height: 60px;
+    width: 245px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    padding-bottom: 15px;
+}
+.navi a:link, .navi a:visited {color: white;}
+.navi a:hover { color: rgb(235, 230, 170); text-shadow: 2px 2px 2px black;}
+.navi a:active { color: rgb(104, 104, 104);}
+
+/* 본문 */
+#noticeBoard { width: 98%; text-align: center; margin-bottom: 50px;}
+#community { width: 98%; text-align: center; margin-bottom: 50px;}
+article h3 {border-bottom: 1px solid gainsboro;}
+table td:hover {font-weight: bold; text-decoration: underline;}
+table td:active {color: grey;}
+
+
+/* footer */
+footer {
+    clear: both;
+    display: block;
+    font-size: small;
+    border-top: 1px solid;
+    line-height: 3px;
+}

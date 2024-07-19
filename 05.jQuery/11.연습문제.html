@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        table {
+            border: 2px solid black;
+        }
+        table * {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>게시판 리스트</h1>
+
+    <table>
+            <tr>
+                <th>글번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>조회수</th>
+                <th>작성일</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>세번쨰 글 제목</td>
+                <td>user01</td>
+                <td>23</td>
+                <td>2023-03-31</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>두번재 글 제목</td>
+                <td>user02</td>
+                <td>15</td>
+                <td>2023-03-13</td>
+            </tr>
+            <tr id="click">
+                <td>1</td>
+                <td>세번재 글 제목</td>
+                <td>admin</td>
+                <td>75</td>
+                <td>2023-03-12</td>
+            </tr>
+    </table>
+
+    <br><br>
+    
+    <span id="result">선택된 게시글 정보 : </span>
+
+    <script>
+        const str = [];
+        $(() => {
+                $('#click').children().each(function(index, el) {
+                    $(el).appendTo('#result');
+                    console.log(el);
+                    console.log(result);
+                    
+                })
+            })
+     </script>
+
+</body>
+</html>
